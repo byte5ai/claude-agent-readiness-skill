@@ -16,28 +16,29 @@ The knowledge base behind the skill is built on the GEO literature (Princeton KD
 
 ## Installation
 
-### Option 1 — Download the release bundle (recommended)
+### Option 1 — Install via the Claude desktop app (recommended)
 
-1. Download [`claude-agent-readiness-skill-v1.0.0.zip`](https://github.com/byte5ai/claude-agent-readiness-skill/releases/latest) from the latest release.
-2. Unzip into your Claude skills directory:
-   - Claude Code (macOS/Linux): `~/.claude/skills/`
-   - Cowork mode: drop the unzipped folder into your skills location or use the plugin manager.
-3. Restart Claude. The skill activates on any of the trigger phrases listed in `SKILL.md`.
+1. Download [`claude-agent-readiness-skill-v1.0.0.skill`](https://github.com/byte5ai/claude-agent-readiness-skill/releases/latest) from the latest release.
+2. In the Claude desktop app, open **Customize → Skills**.
+3. Click **+** → **Skill erstellen / Create skill** → **Skill hochladen / Upload skill** and select the downloaded `.skill` file.
+4. The skill activates immediately on any of the trigger phrases listed in `SKILL.md`. No restart required.
 
-That's it — three steps, no git, no clone.
+That's it — the app handles unpacking, validation, and registration. No manual file manipulation.
 
 ### Option 2 — Clone the repository (for contributors and forks)
 
+If you want to modify the skill, contribute changes back, or maintain a fork:
+
 ```bash
-cd ~/.claude/skills/
-git clone https://github.com/byte5ai/claude-agent-readiness-skill.git ai-agent-readiness
+git clone https://github.com/byte5ai/claude-agent-readiness-skill.git
+cd claude-agent-readiness-skill
 ```
 
-Same result as Option 1, but the folder stays a working git checkout so updates are a `git pull` away.
+To rebuild the `.skill` package after edits, use the `skill-creator` skill's packager (Python script bundled with Claude) or zip the contents with a `.skill` extension. Validate first to ensure the SKILL.md frontmatter stays schema-compliant (`name`, `description`, optional `license`, `compatibility`, `metadata`, `allowed-tools`).
 
 ### Option 3 — Paste into a system prompt or project context
 
-If you do not use a skill loader, the skill is plain Markdown. Paste the contents of `SKILL.md` and the relevant `assets/` files directly into a Claude project's system prompt or context. The tier and confidence rules still apply.
+If you don't use the Claude desktop app's skill loader, the skill is plain Markdown. Paste the contents of `SKILL.md` and the relevant `assets/` files directly into a Claude project's system prompt or context. The tier and confidence rules still apply.
 
 ## How to use
 

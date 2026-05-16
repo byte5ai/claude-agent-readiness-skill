@@ -1,9 +1,6 @@
 ---
 name: ai-agent-readiness
-version: "1.0.0"
-author: "byte5 GmbH <cwendler@byte5.de>"
 license: MIT
-homepage: https://github.com/byte5ai/claude-agent-readiness-skill
 description: |
   Analyzes websites and code repos for how well they are discoverable,
   fetchable, and citable by AI search systems (ChatGPT, Claude, Perplexity,
@@ -16,6 +13,10 @@ description: |
   "check our agent readability", "how citable is my content?",
   "LLM citation optimization", "audit website for AI agents",
   "analyze [URL] for AI optimization".
+metadata:
+  version: "1.0.0"
+  author: "byte5 GmbH <cwendler@byte5.de>"
+  homepage: https://github.com/byte5ai/claude-agent-readiness-skill
 ---
 
 # AI Agent Readiness — Website & Repo Audit
