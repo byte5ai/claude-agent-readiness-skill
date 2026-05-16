@@ -16,20 +16,28 @@ The knowledge base behind the skill is built on the GEO literature (Princeton KD
 
 ## Installation
 
-### As a Claude skill (Claude Code / Cowork mode)
+### Option 1 — Download the release bundle (recommended)
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/byte5ai/claude-agent-readiness-skill.git
-   ```
-2. Copy the `claude-agent-readiness-skill` folder into your Claude skills directory.
-   - On macOS/Linux for Claude Code: `~/.claude/skills/`
-   - On Cowork mode: drag the folder into your plugin manager or place it in your skills directory.
-3. Restart Claude. The skill will activate on any of the trigger phrases listed in `SKILL.md`.
+1. Download [`claude-agent-readiness-skill-v1.0.0.zip`](https://github.com/byte5ai/claude-agent-readiness-skill/releases/latest) from the latest release.
+2. Unzip into your Claude skills directory:
+   - Claude Code (macOS/Linux): `~/.claude/skills/`
+   - Cowork mode: drop the unzipped folder into your skills location or use the plugin manager.
+3. Restart Claude. The skill activates on any of the trigger phrases listed in `SKILL.md`.
 
-### Manual integration
+That's it — three steps, no git, no clone.
 
-If you do not use a skill loader, the skill is plain Markdown — you can paste `SKILL.md` and the relevant `assets/` files into a Claude project or system prompt as context.
+### Option 2 — Clone the repository (for contributors and forks)
+
+```bash
+cd ~/.claude/skills/
+git clone https://github.com/byte5ai/claude-agent-readiness-skill.git ai-agent-readiness
+```
+
+Same result as Option 1, but the folder stays a working git checkout so updates are a `git pull` away.
+
+### Option 3 — Paste into a system prompt or project context
+
+If you do not use a skill loader, the skill is plain Markdown. Paste the contents of `SKILL.md` and the relevant `assets/` files directly into a Claude project's system prompt or context. The tier and confidence rules still apply.
 
 ## How to use
 
