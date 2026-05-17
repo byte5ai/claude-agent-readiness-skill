@@ -1,8 +1,18 @@
 # Claude Agent Readiness Skill
 
+> **A GEO (Generative Engine Optimization) audit skill for Claude.** Where SEO optimizes for traditional search-engine rankings, **GEO** optimizes for how AI systems discover, parse, and cite content. This skill is built on the published GEO/AEO literature and platform documentation as of mid-2026 and treats hype and evidence as separate categories.
+
 A Claude skill that audits **websites and code repositories** for how well they are discoverable, fetchable, parsable, and citable by AI search systems (ChatGPT, Claude, Perplexity, Google AI Mode, Bing Copilot) and coding agents (Codex, Cursor, Aider, Junie, etc.).
 
 The skill produces two outputs side by side: a **structured audit report** with score, findings, and prioritized actions, and an optional **sparring discussion** on the trade-offs behind the recommendations.
+
+## What is GEO?
+
+**Generative Engine Optimization (GEO)** is the practice of making content discoverable, fetchable, and citable by generative AI systems — ChatGPT, Claude, Perplexity, Google AI Mode, Bing Copilot, and the rest. The term was formalized by the Princeton/Georgia Tech/AI2/IIT Delhi research group at KDD 2024 ([arXiv:2311.09735](https://arxiv.org/abs/2311.09735)).
+
+GEO is sometimes used interchangeably with **AEO (Answer Engine Optimization)** and **LLMO (LLM Optimization)**. They all describe the same shift: search traffic increasingly flows through generative answers rather than blue-link results, and the optimization rules for being **cited** by a model are not the same as the rules for **ranking** in a SERP. SEO remains a necessary baseline for Google AI Overview citations (37.9 % of AIO citations come from the top 10, per Ahrefs March 2026), but for ChatGPT, Perplexity, and Gemini the overlap with traditional top-10 rankings is below 30 % — different mechanics, different levers.
+
+This skill is the operational form of that distinction.
 
 ## What makes this skill different
 
